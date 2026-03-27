@@ -1,0 +1,52 @@
+service : 120
+
+residential : 102
+
+footway : 70
+
+secondary : 36
+
+tertiary : 20
+
+steps : 18
+
+cycleway : 15
+
+path : 6
+
+unclassified : 4
+
+living_street : 3
+
+pedestrian : 1
+
+
+
+
+[out:json];
+(
+  way["highway"]({{bbox}});
+);
+out geom;
+
+
+//
+
+requête pour garder extraire les rues et les batiments 
+
+[out:json][timeout:180];
+(
+  // Les routes
+  way["highway"]({{bbox}});
+  
+  // Les bâtiments
+  way["building"]({{bbox}});
+  
+  // Les relations (gros bâtiments complexes)
+  relation["building"]({{bbox}});
+);
+out geom;
+
+
+À GARDER : secondary, tertiary, residential, unclassified, 
+         living_street, service

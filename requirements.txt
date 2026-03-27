@@ -1,0 +1,29 @@
+# Dépendances pour le projet Maquette Tactile 3D
+# Installation: pip install -r requirements.txt
+
+# Projection géographique
+pyproj>=3.6.0
+
+# Calculs numériques
+numpy>=1.24.0
+
+# Génération et manipulation de mesh 3D (⭐ ESSENTIEL)
+trimesh>=4.0.0
+
+# Dépendances de trimesh
+rtree>=1.0.0          # Accélération des requêtes spatiales
+networkx>=3.0         # Opérations sur graphes
+scipy>=1.10.0         # Opérations mathématiques avancées
+pillow>=10.0.0        # Gestion d'images/textures
+
+# Visualisation 2D
+matplotlib>=3.7.0
+
+# Barre de progression
+tqdm>=4.65.0
+
+# Optionnel: Réparation avancée de mesh
+# pymeshfix>=0.16.0
+
+# Optionnel: Géométrie 2D (simplification)
+# shapely>=2.0.0
